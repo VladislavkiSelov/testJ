@@ -1,0 +1,97 @@
+.formCalculator {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 7px;
+  background: #fff;
+  padding: 40px;
+  & > h2 {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .typeRepair,
+  .typeBuilding,
+  .numberRoom {
+    border-bottom: 1px solid rgba(214, 214, 214, 1);
+    padding: 20px 0;
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #595959;
+    }
+  }
+
+  .box_repair_radio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    & > label {
+      width: calc(50% - 14px);
+    }
+  }
+
+  .squareRoom {
+    padding: 20px 0;
+  }
+
+  .sale_repaire {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 17px 50px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    h3 {
+      color: #2d4872;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    h4 {
+      color: #2d4872;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .call {
+    h2 {
+      color: rgba(89, 89, 89, 1);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    div {
+      display: flex;
+      gap: 10px;
+    }
+    input {
+      padding: 12px;
+      border: 1px solid #ccc;
+    }
+      .error {
+        border: 1px solid red;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .call {
+      div {
+        flex-direction: column;
+      }
+    }
+  }
+}
+//---------------------------------------------------------antd
+:where(.css-dev-only-do-not-override-ygnuas).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+  background-color: #ffffff;
+}
+
+:where(.css-dev-only-do-not-override-ygnuas).ant-radio-wrapper .ant-radio-inner::after {
+  width: 24px;
+  height: 24px;
+  margin-block-start: -12px;
+  margin-inline-start: -12px;
+}

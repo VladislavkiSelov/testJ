@@ -1,0 +1,79 @@
+.OurWorks {
+    width: 100vw;
+  overflow-x: hidden;
+  margin-bottom: 250px;
+  & > h2 {
+    position: relative;
+    color: #171616;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    transform: translateX(50%);
+    color: opacity(0);
+    transition: 1s;
+  }
+
+  & > h3 {
+    position: relative;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    transform: translateX(-50%);
+    color: opacity(0);
+    transition: 1s;
+  }
+
+  .active_scroll {
+    color: opacity(1);
+    transform: translateX(0%);
+  }
+
+  .lg-react-element {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    a {
+      height: 250px;
+      display: block;
+      width: calc((100% - 60px) / 3);
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .lg-react-element {
+      gap: 20px;
+      a {
+        width: calc((100% - 40px) / 2);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 80px;
+    & > h2 {
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    & > h3 {
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
+    .lg-react-element {
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
